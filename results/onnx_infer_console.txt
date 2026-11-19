@@ -1,0 +1,40 @@
+
+=== mobilenetv2_baseline  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (99.8%), sea (0.0%), forest (0.0%)
+  [ERR] true: bridge         pred: train (57.3%), tank (14.0%), bridge (6.4%)
+  [ERR] true: worm           pred: plate (38.5%), worm (21.2%), clock (11.4%)
+
+=== mobilenetv2_kd  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (99.9%), sea (0.0%), forest (0.0%)
+  [ERR] true: bridge         pred: tank (48.4%), train (19.8%), bus (8.0%)
+  [ERR] true: worm           pred: plate (46.7%), bowl (25.0%), cup (8.6%)
+
+=== squeezenet_baseline  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (99.8%), sea (0.0%), mountain (0.0%)
+  [ERR] true: bridge         pred: train (33.0%), bus (20.1%), pickup_truck (17.7%)
+  [OK ] true: worm           pred: worm (47.4%), plate (22.3%), orchid (6.1%)
+
+=== squeezenet_kd  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (99.8%), sea (0.1%), forest (0.0%)
+  [ERR] true: bridge         pred: train (21.2%), streetcar (15.7%), bus (15.2%)
+  [ERR] true: worm           pred: plate (80.8%), bowl (6.3%), clock (4.2%)
+
+=== efficientnet_lite0_baseline  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (99.9%), forest (0.0%), sea (0.0%)
+  [OK ] true: bridge         pred: bridge (24.1%), streetcar (22.6%), bus (22.3%)
+  [OK ] true: worm           pred: worm (36.6%), plate (24.3%), clock (8.3%)
+
+=== efficientnet_lite0_kd  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (99.9%), sea (0.0%), forest (0.0%)
+  [OK ] true: bridge         pred: bridge (67.6%), train (17.6%), streetcar (5.0%)
+  [OK ] true: worm           pred: worm (47.2%), plate (31.9%), bowl (5.4%)
+
+=== nas_best  [onnxruntime, cifar10, input 24x24] ===
+  [OK ] true: dog            pred: dog (92.1%), cat (6.6%), horse (0.7%)
+  [ERR] true: cat            pred: horse (31.0%), dog (27.9%), frog (21.8%)
+  [OK ] true: ship           pred: ship (99.2%), airplane (0.7%), deer (0.1%)
+
+=== teacher_resnet50  [onnxruntime, cifar100, input 32x32] ===
+  [OK ] true: plain          pred: plain (100.0%), forest (0.0%), road (0.0%)
+  [OK ] true: bridge         pred: bridge (99.3%), skyscraper (0.2%), streetcar (0.2%)
+  [OK ] true: worm           pred: worm (89.6%), snake (8.5%), plate (0.6%)

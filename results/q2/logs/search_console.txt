@@ -1,0 +1,237 @@
+
+==================================================================================================================================================================
+  Hardware-aware evolutionary NAS | space size ~6.47e+13 | constraints {'max_latency_ms': 4.0, 'max_size_mb': 1.0, 'max_peak_mem_mb': 16.0, 'max_params_m': 0.3}
+==================================================================================================================================================================
+[#000] REJECTED  r28 s24 | 2x24 k5 dsconv hswish | 3x48 k7 conv hswish | h128 d0.2
+         lat 3.95ms | size 1.14MB | mem 5.059MB | 293K params | 117.8 MFLOPs
+         -> size 1.14MB > 1.0MB
+[#001] TRAINED   r24 s32 | 2x16 k3 dsconv silu | 2x48 k7 conv leaky_relu | h256 d0.1
+         lat 1.49ms | size 0.66MB | mem 4.922MB | 168K params | 49.3 MFLOPs
+         -> val acc 53.64% | fitness 57.47 | 71s
+[#002] TRAINED   r32 s32 | 2x16 k5 conv hswish | 3x24 k3 conv leaky_relu | 1x128 k3 mbconv silu | 1x128 k5 mbconv silu | h0 d0.2
+         lat 3.84ms | size 0.79MB | mem 5.391MB | 198K params | 61.9 MFLOPs
+         -> val acc 53.46% | fitness 53.61 | 126s
+[#003] TRAINED   r24 s24 | 1x32 k5 mbconv relu6 | 3x64 k7 dsconv silu | 1x64 k5 dsconv leaky_relu | 1x64 k3 conv relu6 | h128 d0.2
+         lat 2.08ms | size 0.34MB | mem 6.555MB | 80K params | 16.1 MFLOPs
+         -> val acc 53.56% | fitness 56.08 | 277s
+[#004] REJECTED  r24 s32 | 1x16 k7 conv relu6 | 1x48 k3 mbconv leaky_relu | 3x128 k7 mbconv hswish | 3x128 k3 conv leaky_relu | h128 d0.1
+         lat 9.92ms | size 3.32MB | mem 5.867MB | 853K params | 68.0 MFLOPs
+         -> latency 9.92ms > 4.0ms; size 3.32MB > 1.0MB; params 0.85M > 0.3M
+[#005] REJECTED  r28 s32 | 3x32 k7 dsconv relu | 2x32 k3 dsconv leaky_relu | 3x64 k3 conv relu | h128 d0.1
+         lat 7.12ms | size 0.47MB | mem 4.406MB | 114K params | 24.4 MFLOPs
+         -> latency 7.12ms > 4.0ms
+[#006] REJECTED  r28 s16 | 1x24 k3 mbconv relu6 | 1x96 k7 mbconv leaky_relu | 3x128 k3 conv relu | h128 d0.0
+         lat 7.32ms | size 1.73MB | mem 5.113MB | 445K params | 56.0 MFLOPs
+         -> latency 7.32ms > 4.0ms; size 1.73MB > 1.0MB; params 0.44M > 0.3M
+[#007] REJECTED  r28 s16 | 3x16 k3 conv relu | 2x24 k7 conv relu | 3x24 k7 conv hswish | h0 d0.0
+         lat 6.60ms | size 0.55MB | mem 4.863MB | 140K params | 38.3 MFLOPs
+         -> latency 6.60ms > 4.0ms
+[#008] REJECTED  r28 s24 | 2x16 k7 conv silu | 1x24 k5 mbconv silu | h0 d0.2
+         lat 5.54ms | size 0.15MB | mem 4.984MB | 37K params | 53.0 MFLOPs
+         -> latency 5.54ms > 4.0ms
+[#009] REJECTED  r28 s32 | 2x32 k3 conv silu | 3x48 k7 mbconv hswish | 3x64 k5 mbconv hswish | h0 d0.2
+         lat 11.95ms | size 0.83MB | mem 6.848MB | 203K params | 76.3 MFLOPs
+         -> latency 11.95ms > 4.0ms
+[#010] REJECTED  r32 s16 | 3x32 k3 conv silu | 2x64 k5 mbconv hswish | 3x96 k7 conv hswish | h256 d0.0
+         lat 16.39ms | size 5.05MB | mem 8.137MB | 1313K params | 239.6 MFLOPs
+         -> latency 16.39ms > 4.0ms; size 5.05MB > 1.0MB; params 1.31M > 0.3M
+[#011] REJECTED  r24 s32 | 1x24 k3 mbconv silu | 2x48 k7 mbconv silu | h256 d0.1
+         lat 5.80ms | size 0.28MB | mem 5.699MB | 66K params | 27.5 MFLOPs
+         -> latency 5.80ms > 4.0ms
+[#012] REJECTED  r24 s24 | 3x16 k7 mbconv relu | 1x48 k5 dsconv silu | 1x48 k5 conv leaky_relu | 3x128 k7 conv relu | h0 d0.1
+         lat 12.02ms | size 7.62MB | mem 8.887MB | 1988K params | 61.3 MFLOPs
+         -> latency 12.02ms > 4.0ms; size 7.62MB > 1.0MB; params 1.99M > 0.3M
+[#013] REJECTED  r28 s32 | 1x16 k7 conv leaky_relu | 3x16 k3 conv leaky_relu | 3x24 k5 dsconv relu6 | h128 d0.0
+         lat 6.21ms | size 0.18MB | mem 4.645MB | 41K params | 44.0 MFLOPs
+         -> latency 6.21ms > 4.0ms
+[#014] TRAINED   r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | 1x96 k3 mbconv hswish | h0 d0.1
+         lat 3.96ms | size 0.14MB | mem 5.582MB | 30K params | 12.9 MFLOPs
+         -> val acc 48.44% | fitness 48.47 | 242s
+[#015] REJECTED  r32 s32 | 3x32 k5 mbconv silu | 2x64 k7 conv relu6 | 2x96 k5 conv relu6 | 1x128 k5 dsconv hswish | h256 d0.1
+         lat 20.73ms | size 3.00MB | mem 7.621MB | 774K params | 276.6 MFLOPs
+         -> latency 20.73ms > 4.0ms; size 3.00MB > 1.0MB; params 0.77M > 0.3M
+[#016] REJECTED  r32 s16 | 1x16 k3 conv leaky_relu | 2x32 k5 mbconv relu6 | 2x32 k5 mbconv relu6 | h256 d0.0
+         lat 8.72ms | size 0.25MB | mem 4.793MB | 55K params | 20.9 MFLOPs
+         -> latency 8.72ms > 4.0ms
+[#017] REJECTED  r28 s24 | 1x16 k7 dsconv silu | 2x32 k5 conv silu | 1x96 k5 dsconv relu | h128 d0.1
+         lat 4.50ms | size 0.24MB | mem 4.789MB | 59K params | 20.1 MFLOPs
+         -> latency 4.50ms > 4.0ms
+[#018] REJECTED  r24 s32 | 1x16 k3 conv relu6 | 1x48 k3 conv silu | 3x64 k5 dsconv silu | 3x96 k7 conv silu | h128 d0.2
+         lat 8.77ms | size 4.79MB | mem 7.305MB | 1248K params | 31.3 MFLOPs
+         -> latency 8.77ms > 4.0ms; size 4.79MB > 1.0MB; params 1.25M > 0.3M
+[#019] TRAINED   r24 s24 | 1x48 k3 dsconv relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 2.75ms | size 0.48MB | mem 5.281MB | 123K params | 36.6 MFLOPs
+         -> val acc 47.50% | fitness 48.77 | 113s
+[#020] REJECTED  r24 s32 | 2x48 k5 mbconv relu6 | 1x64 k5 conv leaky_relu | h0 d0.0
+         lat 6.55ms | size 0.47MB | mem 5.809MB | 117K params | 65.4 MFLOPs
+         -> latency 6.55ms > 4.0ms
+[#021] REJECTED  r32 s32 | 1x16 k5 mbconv hswish | 2x16 k7 conv hswish | h256 d0.2
+         lat 5.21ms | size 0.18MB | mem 7.398MB | 43K params | 35.9 MFLOPs
+         -> latency 5.21ms > 4.0ms
+[#022] TRAINED   r24 s32 | 1x16 k5 conv silu | 2x64 k3 conv silu | h0 d0.0
+         lat 3.09ms | size 0.24MB | mem 4.418MB | 61K params | 29.0 MFLOPs
+         -> val acc 44.68% | fitness 45.49 | 82s
+[#023] REJECTED  r32 s16 | 2x16 k7 dsconv silu | 2x64 k7 conv relu | 3x64 k7 conv hswish | 3x64 k5 dsconv relu | h128 d0.0
+         lat 15.19ms | size 3.41MB | mem 5.219MB | 884K params | 211.5 MFLOPs
+         -> latency 15.19ms > 4.0ms; size 3.41MB > 1.0MB; params 0.88M > 0.3M
+[#024] REJECTED  r28 s24 | 2x16 k3 mbconv relu6 | 1x32 k7 dsconv relu | 1x48 k5 conv silu | h128 d0.1
+         lat 5.76ms | size 0.24MB | mem 6.371MB | 56K params | 17.4 MFLOPs
+         -> latency 5.76ms > 4.0ms
+[#025] TRAINED   r28 s24 | 2x16 k3 conv silu | 1x32 k3 mbconv leaky_relu | h256 d0.1
+         lat 3.62ms | size 0.10MB | mem 5.5MB | 22K params | 15.9 MFLOPs
+         -> val acc 47.90% | fitness 48.24 | 128s
+[#026] REJECTED  r24 s16 | 3x96 k5 mbconv relu | 3x96 k7 dsconv relu6 | 2x128 k5 mbconv relu | 3x128 k3 conv silu | h256 d0.1
+         lat 25.66ms | size 3.69MB | mem 9.262MB | 945K params | 248.4 MFLOPs
+         -> latency 25.66ms > 4.0ms; size 3.69MB > 1.0MB; params 0.95M > 0.3M
+[#027] REJECTED  r28 s24 | 3x16 k3 conv silu | 2x16 k7 mbconv leaky_relu | h128 d0.1
+         lat 5.03ms | size 0.11MB | mem 4.617MB | 23K params | 19.7 MFLOPs
+         -> latency 5.03ms > 4.0ms
+[#028] REJECTED  r24 s16 | 1x16 k5 conv relu | 2x48 k3 mbconv relu | 2x128 k7 dsconv relu | h256 d0.1
+         lat 6.09ms | size 0.42MB | mem 5.312MB | 101K params | 20.5 MFLOPs
+         -> latency 6.09ms > 4.0ms
+[#029] TRAINED   r24 s24 | 3x16 k5 dsconv relu6 | 1x24 k3 dsconv relu | h0 d0.1
+         lat 3.98ms | size 0.03MB | mem 4.332MB | 4K params | 3.5 MFLOPs
+         -> val acc 39.48% | fitness 39.50 | 116s
+[#030] REJECTED  r24 s24 | 1x32 k5 mbconv relu6 | 3x64 k7 dsconv silu | 1x64 k5 dsconv leaky_relu | 1x64 k3 conv relu6 | h128 d0.0
+         lat 6.14ms | size 0.34MB | mem 6.371MB | 80K params | 16.1 MFLOPs
+         -> latency 6.14ms > 4.0ms
+[#031] REJECTED  r24 s24 | 1x32 k5 mbconv relu6 | 3x64 k7 dsconv silu | 1x64 k5 dsconv leaky_relu | h128 d0.2
+         lat 8.10ms | size 0.20MB | mem 5.367MB | 43K params | 15.9 MFLOPs
+         -> latency 8.10ms > 4.0ms
+[#032] REJECTED  r24 s32 | 2x16 k3 dsconv silu | 2x48 k5 conv leaky_relu | h256 d0.1
+         lat 5.53ms | size 0.38MB | mem 4.637MB | 95K params | 28.0 MFLOPs
+         -> latency 5.53ms > 4.0ms
+[#033] REJECTED  r32 s32 | 2x16 k5 conv silu | 3x24 k3 conv leaky_relu | 1x128 k3 mbconv silu | 1x128 k5 mbconv silu | h0 d0.2
+         lat 10.02ms | size 0.79MB | mem 5.273MB | 198K params | 61.9 MFLOPs
+         -> latency 10.02ms > 4.0ms
+[#034] REJECTED  r24 s24 | 1x32 k5 mbconv relu6 | 3x64 k3 dsconv silu | 1x64 k5 dsconv leaky_relu | 1x64 k3 conv relu6 | h128 d0.2
+         lat 6.26ms | size 0.32MB | mem 5.758MB | 74K params | 14.3 MFLOPs
+         -> latency 6.26ms > 4.0ms
+[#035] REJECTED  r32 s32 | 2x16 k5 conv hswish | 3x24 k3 conv leaky_relu | 1x128 k3 mbconv silu | 1x128 k5 mbconv silu | h128 d0.2
+         lat 8.60ms | size 0.86MB | mem 5.426MB | 214K params | 62.5 MFLOPs
+         -> latency 8.60ms > 4.0ms
+[#036] REJECTED  r24 s32 | 2x48 k3 dsconv silu | 2x64 k7 conv leaky_relu | h256 d0.1
+         lat 7.81ms | size 1.46MB | mem 5.0MB | 377K params | 112.1 MFLOPs
+         -> latency 7.81ms > 4.0ms; size 1.46MB > 1.0MB; params 0.38M > 0.3M
+[#037] TRAINED   r24 s24 | 1x48 k3 dsconv leaky_relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 3.49ms | size 0.48MB | mem 4.969MB | 123K params | 36.6 MFLOPs
+         -> val acc 47.72% | fitness 48.17 | 116s
+[#038] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | 1x96 k3 mbconv hswish | h256 d0.1
+         lat 4.49ms | size 0.24MB | mem 5.312MB | 56K params | 14.7 MFLOPs
+         -> latency 4.49ms > 4.0ms
+[#039] REJECTED  r32 s32 | 2x16 k5 conv hswish | 3x24 k3 conv leaky_relu | 1x128 k3 mbconv silu | h0 d0.2
+         lat 6.78ms | size 0.22MB | mem 5.316MB | 52K params | 51.0 MFLOPs
+         -> latency 6.78ms > 4.0ms
+[#040] TRAINED   r24 s24 | 1x16 k3 dsconv relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 2.67ms | size 0.19MB | mem 4.594MB | 47K params | 14.0 MFLOPs
+         -> val acc 49.22% | fitness 50.63 | 72s
+[#041] REJECTED  r24 s24 | 1x32 k5 mbconv relu6 | 3x64 k7 mbconv silu | 1x64 k5 dsconv leaky_relu | 1x64 k3 conv relu6 | h128 d0.2
+         lat 8.54ms | size 0.71MB | mem 5.918MB | 174K params | 45.9 MFLOPs
+         -> latency 8.54ms > 4.0ms
+[#042] REJECTED  r24 s24 | 1x48 k3 mbconv relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 4.06ms | size 0.51MB | mem 5.305MB | 130K params | 44.0 MFLOPs
+         -> latency 4.06ms > 4.0ms
+[#043] TRAINED   r24 s24 | 1x16 k3 conv relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 2.30ms | size 0.20MB | mem 4.465MB | 50K params | 17.3 MFLOPs
+         -> val acc 44.90% | fitness 46.67 | 71s
+[#044] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 2x32 k3 dsconv relu | 1x96 k3 mbconv hswish | h0 d0.1
+         lat 4.98ms | size 0.14MB | mem 5.484MB | 31K params | 13.3 MFLOPs
+         -> latency 4.98ms > 4.0ms
+[#045] TRAINED   r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | 1x48 k3 mbconv hswish | h0 d0.1
+         lat 3.93ms | size 0.11MB | mem 5.301MB | 23K params | 12.5 MFLOPs
+         -> val acc 48.66% | fitness 48.72 | 245s
+[#046] TRAINED   r24 s24 | 1x16 k3 dsconv leaky_relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 3.10ms | size 0.19MB | mem 4.895MB | 47K params | 14.0 MFLOPs
+         -> val acc 46.98% | fitness 47.83 | 73s
+[#047] TRAINED   r28 s24 | 1x16 k3 dsconv relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 3.42ms | size 0.19MB | mem 4.473MB | 47K params | 19.1 MFLOPs
+         -> val acc 46.22% | fitness 46.73 | 98s
+[#048] TRAINED   r24 s24 | 1x16 k3 dsconv relu | 1x48 k7 dsconv leaky_relu | h128 d0.2
+         lat 3.07ms | size 0.05MB | mem 4.359MB | 11K params | 3.7 MFLOPs
+         -> val acc 42.96% | fitness 43.76 | 65s
+[#049] TRAINED   r24 s24 | 1x16 k3 dsconv relu6 | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 2.81ms | size 0.19MB | mem 4.77MB | 47K params | 14.0 MFLOPs
+         -> val acc 46.66% | fitness 47.83 | 87s
+    [profiler] peak-memory probe failed: list index out of range
+[#050] REJECTED  r24 s24 | 1x48 k3 dsconv leaky_relu | 2x48 k7 conv leaky_relu | h128 d0.2
+         lat 7.35ms | size 0.91MB | mem NoneMB | 236K params | 69.1 MFLOPs
+         -> latency 7.35ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#051] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv hswish | 1x48 k3 mbconv hswish | h0 d0.1
+         lat 6.27ms | size 0.11MB | mem NoneMB | 23K params | 12.5 MFLOPs
+         -> latency 6.27ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#052] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | 1x48 k3 mbconv leaky_relu | h0 d0.1
+         lat 6.25ms | size 0.11MB | mem NoneMB | 23K params | 12.5 MFLOPs
+         -> latency 6.25ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#053] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 1x24 k3 dsconv relu | 1x32 k3 mbconv hswish | h0 d0.1
+         lat 5.21ms | size 0.09MB | mem NoneMB | 17K params | 11.7 MFLOPs
+         -> latency 5.21ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#054] REJECTED  r24 s24 | 1x16 k3 dsconv relu | 1x96 k7 conv leaky_relu | h128 d0.2
+         lat 4.75ms | size 0.36MB | mem NoneMB | 91K params | 26.7 MFLOPs
+         -> latency 4.75ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#055] REJECTED  r24 s24 | 1x16 k3 dsconv leaky_relu | 1x64 k7 conv leaky_relu | h128 d0.2
+         lat 4.21ms | size 0.25MB | mem NoneMB | 61K params | 18.3 MFLOPs
+         -> latency 4.21ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#056] REJECTED  r24 s24 | 1x16 k3 mbconv relu6 | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 5.32ms | size 0.21MB | mem NoneMB | 51K params | 18.8 MFLOPs
+         -> latency 5.32ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#057] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | 1x48 k3 mbconv hswish | h0 d0.0
+         lat 5.66ms | size 0.11MB | mem NoneMB | 23K params | 12.5 MFLOPs
+         -> latency 5.66ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#058] REJECTED  r24 s24 | 1x16 k7 mbconv relu | 1x32 k3 dsconv relu | 1x48 k3 mbconv hswish | h0 d0.1
+         lat 4.52ms | size 0.11MB | mem NoneMB | 23K params | 12.5 MFLOPs
+         -> latency 4.52ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#059] REJECTED  r24 s24 | 1x16 k3 dsconv relu | 3x48 k7 conv leaky_relu | h128 d0.2
+         lat 8.83ms | size 1.06MB | mem NoneMB | 273K params | 79.1 MFLOPs
+         -> latency 8.83ms > 4.0ms; size 1.06MB > 1.0MB
+    [profiler] peak-memory probe failed: list index out of range
+[#060] REJECTED  r24 s24 | 1x48 k3 dsconv leaky_relu | 1x48 k7 conv leaky_relu | 2x128 k7 conv relu | 2x128 k5 conv relu | h128 d0.2
+         lat 14.82ms | size 7.87MB | mem NoneMB | 2057K params | 129.4 MFLOPs
+         -> latency 14.82ms > 4.0ms; size 7.87MB > 1.0MB; params 2.06M > 0.3M
+    [profiler] peak-memory probe failed: list index out of range
+[#061] REJECTED  r32 s24 | 1x16 k3 dsconv relu | 1x48 k7 conv leaky_relu | h128 d0.2
+         lat 5.08ms | size 0.19MB | mem NoneMB | 47K params | 25.0 MFLOPs
+         -> latency 5.08ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#062] REJECTED  r24 s24 | 1x16 k3 dsconv relu6 | 1x48 k7 mbconv leaky_relu | h128 d0.2
+         lat 4.70ms | size 0.08MB | mem NoneMB | 17K params | 6.2 MFLOPs
+         -> latency 4.70ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#063] TRAINED   r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | h0 d0.1
+         lat 3.08ms | size 0.06MB | mem NoneMB | 11K params | 10.8 MFLOPs
+         -> val acc 42.92% | fitness 43.71 | 228s
+    [profiler] peak-memory probe failed: list index out of range
+[#064] TRAINED   r24 s24 | 1x16 k3 dsconv leaky_relu | 1x48 k7 mbconv leaky_relu | h128 d0.2
+         lat 3.23ms | size 0.08MB | mem NoneMB | 17K params | 6.2 MFLOPs
+         -> val acc 48.46% | fitness 49.20 | 112s
+    [profiler] peak-memory probe failed: list index out of range
+[#065] REJECTED  r24 s24 | 1x16 k7 mbconv hswish | 1x48 k3 dsconv relu | 1x96 k3 mbconv hswish | h0 d0.1
+         lat 4.31ms | size 0.18MB | mem NoneMB | 42K params | 15.0 MFLOPs
+         -> latency 4.31ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#066] TRAINED   r28 s24 | 1x16 k3 dsconv leaky_relu | 1x48 k7 mbconv leaky_relu | h128 d0.2
+         lat 3.62ms | size 0.08MB | mem NoneMB | 17K params | 8.4 MFLOPs
+         -> val acc 44.08% | fitness 44.39 | 151s
+    [profiler] peak-memory probe failed: list index out of range
+[#067] REJECTED  r24 s24 | 1x32 k7 mbconv hswish | 1x48 k3 dsconv relu | 1x96 k3 mbconv hswish | h0 d0.1
+         lat 4.50ms | size 0.19MB | mem NoneMB | 45K params | 17.0 MFLOPs
+         -> latency 4.50ms > 4.0ms
+    [profiler] peak-memory probe failed: list index out of range
+[#068] TRAINED   r24 s24 | 1x16 k7 mbconv hswish | 1x32 k3 dsconv relu | 1x48 k7 mbconv hswish | h0 d0.1
+         lat 3.99ms | size 0.13MB | mem NoneMB | 28K params | 12.9 MFLOPs
+         -> val acc 47.92% | fitness 47.93 | 263s
+
+============================================================
+  NAS finished
+============================================================
+candidates: 69 | trained: 20 | rejected: 49 | time: 49.9 min
+BEST #1: r24 s32 | 2x16 k3 dsconv silu | 2x48 k7 conv leaky_relu | h256 d0.1
+  proxy val acc 53.64% | latency 1.49 ms | size 0.661 MB | peak mem 4.922 MB -> results/q2/best_arch.json

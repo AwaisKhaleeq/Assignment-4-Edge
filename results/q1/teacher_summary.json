@@ -1,0 +1,7 @@
+{
+  "model": "resnet50_teacher",
+  "best_test_top1": 78.52,
+  "epochs": 2,
+  "res": 64,
+  "params": 23712932
+}

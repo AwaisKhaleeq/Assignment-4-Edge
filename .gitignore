@@ -1,0 +1,10 @@
+# datasets are downloaded automatically (see README)
+data/
+*.npz
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.idea/
+# the fp32 ONNX teacher is ~90 MB (GitHub limit 100 MB); it is re-created with deploy.export_onnx
+onnx_models/teacher_resnet50.onnx

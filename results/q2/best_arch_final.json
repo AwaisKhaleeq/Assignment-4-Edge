@@ -1,0 +1,49 @@
+{
+  "arch": "r24 s32 | 2x16 k3 dsconv silu | 2x48 k7 conv leaky_relu | h256 d0.1",
+  "config": {
+    "resolution": 24,
+    "stem_channels": 32,
+    "num_stages": 2,
+    "head_channels": 256,
+    "dropout": 0.1,
+    "stages": [
+      {
+        "depth": 2,
+        "channels": 16,
+        "kernel": 3,
+        "block": "dsconv",
+        "activation": "silu"
+      },
+      {
+        "depth": 2,
+        "channels": 48,
+        "kernel": 7,
+        "block": "conv",
+        "activation": "leaky_relu"
+      },
+      {
+        "depth": 2,
+        "channels": 64,
+        "kernel": 7,
+        "block": "dsconv",
+        "activation": "relu"
+      },
+      {
+        "depth": 3,
+        "channels": 64,
+        "kernel": 3,
+        "block": "mbconv",
+        "activation": "silu"
+      }
+    ]
+  },
+  "epochs": 15,
+  "params": 168378,
+  "best_epoch": 15,
+  "val_top1": 82.28,
+  "test_top1": 82.07,
+  "test_top5": 99.17,
+  "proxy_val_top1_during_search": 53.64,
+  "train_time_min": 27.81491348743439,
+  "checkpoint": "checkpoints/nas_best.pt"
+}

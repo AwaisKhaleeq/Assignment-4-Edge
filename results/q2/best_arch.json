@@ -1,0 +1,78 @@
+{
+  "best_id": 1,
+  "best_arch": "r24 s32 | 2x16 k3 dsconv silu | 2x48 k7 conv leaky_relu | h256 d0.1",
+  "config": {
+    "resolution": 24,
+    "stem_channels": 32,
+    "num_stages": 2,
+    "head_channels": 256,
+    "dropout": 0.1,
+    "stages": [
+      {
+        "depth": 2,
+        "channels": 16,
+        "kernel": 3,
+        "block": "dsconv",
+        "activation": "silu"
+      },
+      {
+        "depth": 2,
+        "channels": 48,
+        "kernel": 7,
+        "block": "conv",
+        "activation": "leaky_relu"
+      },
+      {
+        "depth": 2,
+        "channels": 64,
+        "kernel": 7,
+        "block": "dsconv",
+        "activation": "relu"
+      },
+      {
+        "depth": 3,
+        "channels": 64,
+        "kernel": 3,
+        "block": "mbconv",
+        "activation": "silu"
+      }
+    ]
+  },
+  "val_top1_proxy": 53.64,
+  "fitness": 57.46575301114506,
+  "latency_ms": 1.4949499964131974,
+  "size_mb": 0.6613283157348633,
+  "peak_mem_mb": 4.922,
+  "params_m": 0.168378,
+  "mflops": 49.273856,
+  "constraints": {
+    "max_latency_ms": 4.0,
+    "max_size_mb": 1.0,
+    "max_peak_mem_mb": 16.0,
+    "max_params_m": 0.3
+  },
+  "search_args": {
+    "population": 8,
+    "sample": 3,
+    "budget": 20,
+    "max_attempts": 200,
+    "epochs": 3,
+    "train_subset": 10000,
+    "val_size": 5000,
+    "batch_size": 128,
+    "lr": 0.1,
+    "max_latency_ms": 4.0,
+    "max_size_mb": 1.0,
+    "max_peak_mem_mb": 16.0,
+    "max_params_m": 0.3,
+    "latency_weight": -0.07,
+    "out": "results/q2",
+    "data": "data",
+    "seed": 0,
+    "device": "auto"
+  },
+  "n_candidates": 69,
+  "n_trained": 20,
+  "n_rejected": 49,
+  "search_time_min": 49.854960628350575
+}

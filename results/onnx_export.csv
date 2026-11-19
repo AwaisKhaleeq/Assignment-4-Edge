@@ -1,0 +1,9 @@
+model,onnx_path,onnx_size_mb,input_shape,opset,max_abs_diff,top1_agreement
+mobilenetv2_baseline,onnx_models/mobilenetv2_baseline.onnx,8.9421,Nx3x32x32,17,3.814697265625e-06,100.0
+mobilenetv2_kd,onnx_models/mobilenetv2_kd.onnx,8.9421,Nx3x32x32,17,7.62939453125e-06,100.0
+squeezenet_baseline,onnx_models/squeezenet_baseline.onnx,2.9651,Nx3x32x32,17,4.76837158203125e-06,100.0
+squeezenet_kd,onnx_models/squeezenet_kd.onnx,2.9651,Nx3x32x32,17,6.198883056640625e-06,100.0
+efficientnet_lite0_baseline,onnx_models/efficientnet_lite0_baseline.onnx,13.3027,Nx3x32x32,17,3.814697265625e-06,100.0
+efficientnet_lite0_kd,onnx_models/efficientnet_lite0_kd.onnx,13.3027,Nx3x32x32,17,4.76837158203125e-06,100.0
+nas_best,onnx_models/nas_best.onnx,0.6454,Nx3x24x24,17,4.291534423828125e-06,100.0
+teacher_resnet50,onnx_models/teacher_resnet50.onnx,90.3804,Nx3x32x32,17,3.814697265625e-06,100.0

@@ -1,0 +1,112 @@
+  mobilenetv2          params = 2.35M
+  squeezenet           params = 0.78M
+  efficientnet_lite0   params = 3.50M
+
+===========================================================================================================
+  BASELINE training (no KD) | ['mobilenetv2', 'squeezenet', 'efficientnet_lite0'] | epochs=5 | device=cpu
+===========================================================================================================
+  [baseline] ep 1 [   0/390] mobilenetv2: L 4.600 acc  1.56% | squeezenet: L 4.981 acc  0.78% | efficientnet_lite0: L 4.660 acc  2.34%
+  [baseline] ep 1 [  50/390] mobilenetv2: L 4.587 acc  1.69% | squeezenet: L 4.610 acc  2.25% | efficientnet_lite0: L 4.587 acc  1.75%
+  [baseline] ep 1 [ 100/390] mobilenetv2: L 4.481 acc  2.60% | squeezenet: L 4.446 acc  3.50% | efficientnet_lite0: L 4.485 acc  2.80%
+  [baseline] ep 1 [ 150/390] mobilenetv2: L 4.383 acc  3.80% | squeezenet: L 4.313 acc  4.62% | efficientnet_lite0: L 4.380 acc  4.01%
+  [baseline] ep 1 [ 200/390] mobilenetv2: L 4.315 acc  4.71% | squeezenet: L 4.229 acc  5.51% | efficientnet_lite0: L 4.321 acc  4.69%
+  [baseline] ep 1 [ 250/390] mobilenetv2: L 4.242 acc  5.61% | squeezenet: L 4.148 acc  6.46% | efficientnet_lite0: L 4.252 acc  5.53%
+  [baseline] ep 1 [ 300/390] mobilenetv2: L 4.169 acc  6.51% | squeezenet: L 4.074 acc  7.39% | efficientnet_lite0: L 4.184 acc  6.35%
+  [baseline] ep 1 [ 350/390] mobilenetv2: L 4.104 acc  7.36% | squeezenet: L 4.009 acc  8.30% | efficientnet_lite0: L 4.119 acc  7.11%
+[baseline] mobilenetv2          epoch 1/5 | train  7.92% | test top1 15.36% top5 42.37%
+[baseline] squeezenet           epoch 1/5 | train  9.00% | test top1 16.09% top5 41.56%
+[baseline] efficientnet_lite0   epoch 1/5 | train  7.63% | test top1 14.76% top5 40.01%
+[baseline] epoch 1 finished in 1335s
+  [baseline] ep 2 [   0/390] mobilenetv2: L 3.436 acc 17.97% | squeezenet: L 3.448 acc 14.06% | efficientnet_lite0: L 3.393 acc 17.19%
+  [baseline] ep 2 [  50/390] mobilenetv2: L 3.573 acc 14.37% | squeezenet: L 3.484 acc 15.79% | efficientnet_lite0: L 3.607 acc 13.39%
+  [baseline] ep 2 [ 100/390] mobilenetv2: L 3.537 acc 15.03% | squeezenet: L 3.439 acc 16.14% | efficientnet_lite0: L 3.562 acc 14.45%
+  [baseline] ep 2 [ 150/390] mobilenetv2: L 3.519 acc 15.15% | squeezenet: L 3.412 acc 16.49% | efficientnet_lite0: L 3.539 acc 14.71%
+  [baseline] ep 2 [ 200/390] mobilenetv2: L 3.489 acc 15.71% | squeezenet: L 3.374 acc 17.25% | efficientnet_lite0: L 3.506 acc 15.22%
+  [baseline] ep 2 [ 250/390] mobilenetv2: L 3.461 acc 16.20% | squeezenet: L 3.339 acc 17.92% | efficientnet_lite0: L 3.477 acc 15.71%
+  [baseline] ep 2 [ 300/390] mobilenetv2: L 3.434 acc 16.72% | squeezenet: L 3.306 acc 18.38% | efficientnet_lite0: L 3.451 acc 16.13%
+  [baseline] ep 2 [ 350/390] mobilenetv2: L 3.409 acc 17.23% | squeezenet: L 3.277 acc 18.90% | efficientnet_lite0: L 3.421 acc 16.69%
+[baseline] mobilenetv2          epoch 2/5 | train 17.57% | test top1 21.59% top5 51.20%
+[baseline] squeezenet           epoch 2/5 | train 19.35% | test top1 22.68% top5 54.05%
+[baseline] efficientnet_lite0   epoch 2/5 | train 17.05% | test top1 23.13% top5 53.69%
+[baseline] epoch 2 finished in 1175s
+  [baseline] ep 3 [   0/390] mobilenetv2: L 3.363 acc 22.66% | squeezenet: L 2.981 acc 28.12% | efficientnet_lite0: L 3.200 acc 27.34%
+  [baseline] ep 3 [  50/390] mobilenetv2: L 3.127 acc 22.27% | squeezenet: L 2.992 acc 23.93% | efficientnet_lite0: L 3.118 acc 21.97%
+  [baseline] ep 3 [ 100/390] mobilenetv2: L 3.124 acc 22.11% | squeezenet: L 2.976 acc 24.45% | efficientnet_lite0: L 3.111 acc 21.88%
+  [baseline] ep 3 [ 150/390] mobilenetv2: L 3.108 acc 22.21% | squeezenet: L 2.953 acc 24.93% | efficientnet_lite0: L 3.096 acc 21.95%
+  [baseline] ep 3 [ 200/390] mobilenetv2: L 3.089 acc 22.68% | squeezenet: L 2.936 acc 25.29% | efficientnet_lite0: L 3.071 acc 22.38%
+  [baseline] ep 3 [ 250/390] mobilenetv2: L 3.067 acc 23.19% | squeezenet: L 2.917 acc 25.61% | efficientnet_lite0: L 3.044 acc 22.92%
+  [baseline] ep 3 [ 300/390] mobilenetv2: L 3.050 acc 23.47% | squeezenet: L 2.902 acc 25.77% | efficientnet_lite0: L 3.023 acc 23.38%
+  [baseline] ep 3 [ 350/390] mobilenetv2: L 3.031 acc 23.80% | squeezenet: L 2.886 acc 26.14% | efficientnet_lite0: L 3.001 acc 23.91%
+[baseline] mobilenetv2          epoch 3/5 | train 24.18% | test top1 29.88% top5 61.43%
+[baseline] squeezenet           epoch 3/5 | train 26.46% | test top1 29.94% top5 62.45%
+[baseline] efficientnet_lite0   epoch 3/5 | train 24.22% | test top1 27.53% top5 60.84%
+[baseline] epoch 3 finished in 1329s
+  [baseline] ep 4 [   0/390] mobilenetv2: L 2.586 acc 38.28% | squeezenet: L 2.518 acc 28.91% | efficientnet_lite0: L 2.610 acc 31.25%
+  [baseline] ep 4 [  50/390] mobilenetv2: L 2.746 acc 29.67% | squeezenet: L 2.645 acc 31.13% | efficientnet_lite0: L 2.709 acc 29.86%
+  [baseline] ep 4 [ 100/390] mobilenetv2: L 2.754 acc 29.52% | squeezenet: L 2.650 acc 31.05% | efficientnet_lite0: L 2.720 acc 29.26%
+  [baseline] ep 4 [ 150/390] mobilenetv2: L 2.750 acc 29.62% | squeezenet: L 2.642 acc 31.36% | efficientnet_lite0: L 2.713 acc 29.59%
+  [baseline] ep 4 [ 200/390] mobilenetv2: L 2.734 acc 29.94% | squeezenet: L 2.634 acc 31.48% | efficientnet_lite0: L 2.697 acc 29.85%
+  [baseline] ep 4 [ 250/390] mobilenetv2: L 2.709 acc 30.47% | squeezenet: L 2.610 acc 32.00% | efficientnet_lite0: L 2.673 acc 30.27%
+  [baseline] ep 4 [ 300/390] mobilenetv2: L 2.679 acc 30.99% | squeezenet: L 2.583 acc 32.49% | efficientnet_lite0: L 2.643 acc 30.75%
+  [baseline] ep 4 [ 350/390] mobilenetv2: L 2.660 acc 31.40% | squeezenet: L 2.564 acc 32.93% | efficientnet_lite0: L 2.623 acc 31.29%
+[baseline] mobilenetv2          epoch 4/5 | train 31.75% | test top1 37.41% top5 69.35%
+[baseline] squeezenet           epoch 4/5 | train 33.09% | test top1 37.32% top5 69.97%
+[baseline] efficientnet_lite0   epoch 4/5 | train 31.66% | test top1 38.90% top5 71.76%
+[baseline] epoch 4 finished in 1571s
+  [baseline] ep 5 [   0/390] mobilenetv2: L 2.485 acc 42.97% | squeezenet: L 2.482 acc 40.62% | efficientnet_lite0: L 2.642 acc 36.72%
+  [baseline] ep 5 [  50/390] mobilenetv2: L 2.361 acc 37.56% | squeezenet: L 2.339 acc 37.41% | efficientnet_lite0: L 2.317 acc 37.59%
+  [baseline] ep 5 [ 100/390] mobilenetv2: L 2.352 acc 37.59% | squeezenet: L 2.325 acc 37.59% | efficientnet_lite0: L 2.302 acc 37.78%
+  [baseline] ep 5 [ 150/390] mobilenetv2: L 2.336 acc 37.84% | squeezenet: L 2.310 acc 37.99% | efficientnet_lite0: L 2.284 acc 38.12%
+  [baseline] ep 5 [ 200/390] mobilenetv2: L 2.315 acc 38.18% | squeezenet: L 2.298 acc 38.43% | efficientnet_lite0: L 2.268 acc 38.69%
+  [baseline] ep 5 [ 250/390] mobilenetv2: L 2.306 acc 38.43% | squeezenet: L 2.290 acc 38.59% | efficientnet_lite0: L 2.259 acc 38.86%
+  [baseline] ep 5 [ 300/390] mobilenetv2: L 2.299 acc 38.50% | squeezenet: L 2.284 acc 38.81% | efficientnet_lite0: L 2.251 acc 39.04%
+  [baseline] ep 5 [ 350/390] mobilenetv2: L 2.288 acc 38.75% | squeezenet: L 2.274 acc 39.06% | efficientnet_lite0: L 2.238 acc 39.41%
+[baseline] mobilenetv2          epoch 5/5 | train 38.74% | test top1 41.95% top5 74.14%
+[baseline] squeezenet           epoch 5/5 | train 39.14% | test top1 42.51% top5 74.12%
+[baseline] efficientnet_lite0   epoch 5/5 | train 39.54% | test top1 43.99% top5 75.72%
+[baseline] epoch 5 finished in 2204s
+[baseline] mobilenetv2          best test top1 = 41.95%
+[baseline] squeezenet           best test top1 = 42.51%
+[baseline] efficientnet_lite0   best test top1 = 43.99%
+  teacher loaded: checkpoints/teacher_resnet50.pt (test top1 78.52%)
+  mobilenetv2          params = 2.35M
+  squeezenet           params = 0.78M
+  efficientnet_lite0   params = 3.50M
+
+===============================================================
+  KD training | mode=both T=4.0 alpha=0.9 beta=1.0 | epochs=5
+===============================================================
+  [kd] ep 1 [   0/390] mobilenetv2: L 8.515 acc  0.78% | squeezenet: L 8.686 acc  0.00% | efficientnet_lite0: L 8.549 acc  1.56%
+  [kd] ep 1 [  50/390] mobilenetv2: L 8.071 acc  1.90% | squeezenet: L 8.162 acc  2.04% | efficientnet_lite0: L 8.098 acc  1.85%
+  [kd] ep 1 [ 100/390] mobilenetv2: L 7.859 acc  2.71% | squeezenet: L 7.887 acc  3.39% | efficientnet_lite0: L 7.781 acc  2.86%
+  [kd] ep 1 [ 150/390] mobilenetv2: L 7.642 acc  3.90% | squeezenet: L 7.625 acc  4.63% | efficientnet_lite0: L 7.552 acc  4.14%
+  [kd] ep 1 [ 200/390] mobilenetv2: L 7.476 acc  4.78% | squeezenet: L 7.427 acc  5.84% | efficientnet_lite0: L 7.391 acc  5.20%
+  [kd] ep 1 [ 250/390] mobilenetv2: L 7.343 acc  5.71% | squeezenet: L 7.282 acc  6.65% | efficientnet_lite0: L 7.265 acc  6.07%
+  [kd] ep 1 [ 300/390] mobilenetv2: L 7.214 acc  6.70% | squeezenet: L 7.152 acc  7.58% | efficientnet_lite0: L 7.144 acc  6.96%
+  [kd] ep 1 [ 350/390] mobilenetv2: L 7.090 acc  7.56% | squeezenet: L 7.027 acc  8.50% | efficientnet_lite0: L 7.022 acc  7.89%
+[kd] mobilenetv2          epoch 1/5 | train  8.14% | test top1 14.33% top5 41.69%
+[kd] squeezenet           epoch 1/5 | train  9.22% | test top1 15.96% top5 43.51%
+[kd] efficientnet_lite0   epoch 1/5 | train  8.50% | test top1 15.23% top5 41.58%
+[kd] epoch 1 finished in 2086s
+  [kd] ep 2 [   0/390] mobilenetv2: L 6.109 acc 15.62% | squeezenet: L 5.645 acc 21.88% | efficientnet_lite0: L 5.836 acc 19.53%
+  [kd] ep 2 [  50/390] mobilenetv2: L 6.101 acc 14.83% | squeezenet: L 5.925 acc 17.19% | efficientnet_lite0: L 6.039 acc 15.75%
+  [kd] ep 2 [ 100/390] mobilenetv2: L 6.042 acc 15.52% | squeezenet: L 5.873 acc 17.41% | efficientnet_lite0: L 5.980 acc 16.02%
+  [kd] ep 2 [ 150/390] mobilenetv2: L 5.959 acc 16.09% | squeezenet: L 5.788 acc 17.73% | efficientnet_lite0: L 5.899 acc 16.41%
+  [kd] ep 2 [ 200/390] mobilenetv2: L 5.864 acc 16.66% | squeezenet: L 5.689 acc 18.42% | efficientnet_lite0: L 5.791 acc 17.09%
+  [kd] ep 2 [ 250/390] mobilenetv2: L 5.768 acc 17.30% | squeezenet: L 5.586 acc 19.13% | efficientnet_lite0: L 5.680 acc 17.83%
+  [kd] ep 2 [ 300/390] mobilenetv2: L 5.665 acc 17.86% | squeezenet: L 5.473 acc 19.82% | efficientnet_lite0: L 5.564 acc 18.54%
+  [kd] ep 2 [ 350/390] mobilenetv2: L 5.576 acc 18.49% | squeezenet: L 5.384 acc 20.36% | efficientnet_lite0: L 5.458 acc 19.25%
+[kd] mobilenetv2          epoch 2/5 | train 18.83% | test top1 21.31% top5 51.13%
+[kd] squeezenet           epoch 2/5 | train 20.73% | test top1 22.92% top5 52.49%
+[kd] efficientnet_lite0   epoch 2/5 | train 19.70% | test top1 24.69% top5 57.29%
+[kd] epoch 2 finished in 2713s
+  [kd] ep 3 [   0/390] mobilenetv2: L 5.072 acc 21.88% | squeezenet: L 4.858 acc 22.66% | efficientnet_lite0: L 4.707 acc 28.91%
+  [kd] ep 3 [  50/390] mobilenetv2: L 4.865 acc 24.57% | squeezenet: L 4.686 acc 26.03% | efficientnet_lite0: L 4.647 acc 26.01%
+  [kd] ep 3 [ 100/390] mobilenetv2: L 4.836 acc 24.79% | squeezenet: L 4.661 acc 26.17% | efficientnet_lite0: L 4.606 acc 26.31%
+  [kd] ep 3 [ 150/390] mobilenetv2: L 4.788 acc 25.21% | squeezenet: L 4.630 acc 26.43% | efficientnet_lite0: L 4.549 acc 26.59%
+  [kd] ep 3 [ 200/390] mobilenetv2: L 4.724 acc 25.44% | squeezenet: L 4.567 acc 26.79% | efficientnet_lite0: L 4.475 acc 27.20%
+  [kd] ep 3 [ 250/390] mobilenetv2: L 4.666 acc 25.96% | squeezenet: L 4.514 acc 27.24% | efficientnet_lite0: L 4.402 acc 27.85%
+  [kd] ep 3 [ 300/390] mobilenetv2: L 4.611 acc 26.31% | squeezenet: L 4.468 acc 27.57% | efficientnet_lite0: L 4.340 acc 28.40%
+  [kd] ep 3 [ 350/390] mobilenetv2: L 4.568 acc 26.82% | squeezenet: L 4.446 acc 27.86% | efficientnet_lite0: L 4.294 acc 29.04%
+[kd] mobilenetv2          epoch 3/5 | train 27.20% | test top1 30.31% top5 62.24%
+[kd] squeezenet           epoch 3/5 | train 28.08% | test top1 32.80% top5 67.12%

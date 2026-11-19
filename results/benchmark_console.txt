@@ -1,0 +1,17 @@
+[bench] mobilenetv2_baseline         top1  41.95% (ort  41.95%) | 2.352M |    49.2 MFLOPs | torch    6.43ms | ort    1.24ms | onnx   8.94MB | mem 0.98MB | 33s
+[bench] mobilenetv2_kd               top1  44.88% (ort  44.88%) | 2.352M |    49.2 MFLOPs | torch    5.92ms | ort    1.17ms | onnx   8.94MB | mem 0.902MB | 31s
+[bench] squeezenet_baseline          top1  42.51% (ort  42.51%) | 0.777M |    48.5 MFLOPs | torch    4.65ms | ort    0.64ms | onnx   2.97MB | mem 0.719MB | 28s
+[bench] squeezenet_kd                top1  42.71% (ort  42.71%) | 0.777M |    48.5 MFLOPs | torch    4.62ms | ort    0.74ms | onnx   2.97MB | mem 0.715MB | 29s
+[bench] efficientnet_lite0_baseline  top1  43.99% (ort  43.99%) | 3.499M |    62.9 MFLOPs | torch    8.81ms | ort    1.49ms | onnx  13.30MB | mem 1.078MB | 35s
+[bench] efficientnet_lite0_kd        top1  47.68% (ort  47.68%) | 3.499M |    62.9 MFLOPs | torch    9.23ms | ort    1.56ms | onnx  13.30MB | mem 1.137MB | 34s
+[bench] nas_best                     top1  82.07% (ort  82.07%) | 0.168M |    49.3 MFLOPs | torch    2.33ms | ort    0.69ms | onnx   0.65MB | mem 0.617MB | 15s
+[bench] teacher_resnet50             top1  78.50% (ort  78.50%) | 23.713M |   667.7 MFLOPs | torch   24.16ms | ort   12.67ms | onnx  90.38MB | mem 1.312MB | 122s
+                      model  torch_top1  ort_top1  params_m  mflops  onnx_size_mb  torch_lat_ms_1t  ort_lat_ms_1t  ort_throughput_b64  ort_peak_mem_mb
+       mobilenetv2_baseline       41.95     41.95      2.35   49.15          8.94             6.43           1.24             2351.20             0.98
+             mobilenetv2_kd       44.88     44.88      2.35   49.15          8.94             5.92           1.17             2298.59             0.90
+        squeezenet_baseline       42.51     42.51      0.78   48.50          2.97             4.65           0.64             2968.93             0.72
+              squeezenet_kd       42.71     42.71      0.78   48.50          2.97             4.62           0.74             3041.68             0.72
+efficientnet_lite0_baseline       43.99     43.99      3.50   62.93         13.30             8.81           1.49             1915.10             1.08
+      efficientnet_lite0_kd       47.68     47.68      3.50   62.93         13.30             9.23           1.56             1921.09             1.14
+                   nas_best       82.07     82.07      0.17   49.27          0.65             2.33           0.69             3276.55             0.62
+           teacher_resnet50       78.50     78.50     23.71  667.70         90.38            24.16          12.67              223.86             1.31

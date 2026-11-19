@@ -1,0 +1,73 @@
+{
+  "config": {
+    "students": [
+      "mobilenetv2",
+      "squeezenet",
+      "efficientnet_lite0"
+    ],
+    "epochs": 5,
+    "batch_size": 128,
+    "lr": 0.1,
+    "wd": 0.0005,
+    "train_subset": null,
+    "data": "data",
+    "seed": 42,
+    "device": "auto"
+  },
+  "results": {
+    "mobilenetv2": {
+      "best_test_top1": 41.95,
+      "final": {
+        "epoch": 5,
+        "train_loss": 2.287257421933688,
+        "train_top1": 38.74399038461539,
+        "ce": 2.287257421933688,
+        "kd": 0.0,
+        "feat": 0.0,
+        "test_loss": 2.1444938526153563,
+        "test_top1": 41.95,
+        "test_top5": 74.14,
+        "lr": 0.0001000897218124581,
+        "time_s": 731.5215880870819
+      },
+      "params": 2351972,
+      "checkpoint": "checkpoints/students/mobilenetv2_baseline.pt"
+    },
+    "squeezenet": {
+      "best_test_top1": 42.51,
+      "final": {
+        "epoch": 5,
+        "train_loss": 2.2729672245490247,
+        "train_top1": 39.138621794871796,
+        "ce": 2.2729672245490247,
+        "kd": 0.0,
+        "feat": 0.0,
+        "test_loss": 2.150519103240967,
+        "test_top1": 42.51,
+        "test_top5": 74.12,
+        "lr": 0.0001000897218124581,
+        "time_s": 367.3775124549866
+      },
+      "params": 776740,
+      "checkpoint": "checkpoints/students/squeezenet_baseline.pt"
+    },
+    "efficientnet_lite0": {
+      "best_test_top1": 43.99,
+      "final": {
+        "epoch": 5,
+        "train_loss": 2.2338324843308865,
+        "train_top1": 39.53926282051282,
+        "ce": 2.2338324843308865,
+        "kd": 0.0,
+        "feat": 0.0,
+        "test_loss": 2.0633060745239256,
+        "test_top1": 43.99,
+        "test_top5": 75.72,
+        "lr": 0.0001000897218124581,
+        "time_s": 1035.6036128997803
+      },
+      "params": 3499108,
+      "checkpoint": "checkpoints/students/efficientnet_lite0_baseline.pt"
+    }
+  }
+}

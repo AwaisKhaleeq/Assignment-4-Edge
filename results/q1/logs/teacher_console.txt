@@ -1,0 +1,23 @@
+
+============================================================
+  Teacher ResNet-50 | params=23.71M | res=64 | device=cpu
+============================================================
+  ep 1 [   0/390] loss 4.684 acc  0.00% (46 img/s)
+  ep 1 [  50/390] loss 3.983 acc 15.09% (43 img/s)
+  ep 1 [ 100/390] loss 2.947 acc 31.83% (42 img/s)
+  ep 1 [ 150/390] loss 2.464 acc 40.39% (40 img/s)
+  ep 1 [ 200/390] loss 2.195 acc 45.42% (38 img/s)
+  ep 1 [ 250/390] loss 2.014 acc 48.89% (38 img/s)
+  ep 1 [ 300/390] loss 1.871 acc 51.87% (38 img/s)
+  ep 1 [ 350/390] loss 1.767 acc 54.02% (37 img/s)
+[teacher] epoch 1/2 train_acc 55.37% | test top1 71.38% top5 94.00% | 1427s
+  ep 2 [   0/390] loss 1.015 acc 65.62% (31 img/s)
+  ep 2 [  50/390] loss 0.902 acc 72.89% (33 img/s)
+  ep 2 [ 100/390] loss 0.872 acc 73.61% (38 img/s)
+  ep 2 [ 150/390] loss 0.855 acc 74.16% (40 img/s)
+  ep 2 [ 200/390] loss 0.841 acc 74.56% (39 img/s)
+  ep 2 [ 250/390] loss 0.827 acc 74.84% (40 img/s)
+  ep 2 [ 300/390] loss 0.815 acc 75.19% (41 img/s)
+  ep 2 [ 350/390] loss 0.802 acc 75.63% (42 img/s)
+[teacher] epoch 2/2 train_acc 75.96% | test top1 78.52% top5 96.61% | 1219s
+[teacher] done. best test top1 = 78.52% -> checkpoints/teacher_resnet50.pt

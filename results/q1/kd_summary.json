@@ -1,0 +1,80 @@
+{
+  "config": {
+    "teacher": "checkpoints/teacher_resnet50.pt",
+    "students": [
+      "mobilenetv2",
+      "squeezenet",
+      "efficientnet_lite0"
+    ],
+    "epochs": 5,
+    "batch_size": 128,
+    "lr": 0.1,
+    "wd": 0.0005,
+    "T": 4.0,
+    "alpha": 0.9,
+    "beta": 1.0,
+    "kd_mode": "both",
+    "suffix": "kd",
+    "train_subset": null,
+    "data": "data",
+    "seed": 42,
+    "device": "auto"
+  },
+  "teacher_top1": 78.52,
+  "results": {
+    "mobilenetv2": {
+      "best_test_top1": 44.88,
+      "final": {
+        "epoch": 5,
+        "train_loss": 3.256255096044296,
+        "train_top1": 41.5244391025641,
+        "ce": 2.2756284836011056,
+        "kd": 2.2483308290823913,
+        "feat": 1.005194550446975,
+        "test_loss": 2.1008440385818483,
+        "test_top1": 44.88,
+        "test_top5": 78.1,
+        "lr": 0.0001000897218124581,
+        "time_s": 541.6774837970734
+      },
+      "params": 2351972,
+      "checkpoint": "checkpoints/students/mobilenetv2_kd.pt"
+    },
+    "squeezenet": {
+      "best_test_top1": 42.71,
+      "final": {
+        "epoch": 5,
+        "train_loss": 3.419435581794152,
+        "train_top1": 39.59735576923077,
+        "ce": 2.296008937786787,
+        "kd": 2.3499530345965653,
+        "feat": 1.074877016666608,
+        "test_loss": 2.1772709869384768,
+        "test_top1": 42.71,
+        "test_top5": 76.11,
+        "lr": 0.0001000897218124581,
+        "time_s": 261.30130219459534
+      },
+      "params": 776740,
+      "checkpoint": "checkpoints/students/squeezenet_kd.pt"
+    },
+    "efficientnet_lite0": {
+      "best_test_top1": 47.68,
+      "final": {
+        "epoch": 5,
+        "train_loss": 3.032915170987447,
+        "train_top1": 44.23477564102564,
+        "ce": 2.1304579896804614,
+        "kd": 2.0438448212085625,
+        "feat": 0.9804090807071099,
+        "test_loss": 1.9818204082489013,
+        "test_top1": 47.68,
+        "test_top5": 80.12,
+        "lr": 0.0001000897218124581,
+        "time_s": 696.3530194759369
+      },
+      "params": 3499108,
+      "checkpoint": "checkpoints/students/efficientnet_lite0_kd.pt"
+    }
+  }
+}

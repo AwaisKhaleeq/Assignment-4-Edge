@@ -1,0 +1,80 @@
+
+===================================================================================================================================
+  Training best NAS architecture from scratch | r24 s32 | 2x16 k3 dsconv silu | 2x48 k7 conv leaky_relu | h256 d0.1 | 168K params
+===================================================================================================================================
+    ep 1 [   0/351] loss 2.341 acc 13.28%
+    ep 1 [ 100/351] loss 1.882 acc 28.57%
+    ep 1 [ 200/351] loss 1.743 acc 34.33%
+    ep 1 [ 300/351] loss 1.649 acc 38.33%
+  epoch 1/15 train 39.94% val 50.64% test 50.65% (81s)
+    ep 2 [   0/351] loss 1.288 acc 46.88%
+    ep 2 [ 100/351] loss 1.300 acc 53.43%
+    ep 2 [ 200/351] loss 1.254 acc 54.76%
+    ep 2 [ 300/351] loss 1.221 acc 56.03%
+  epoch 2/15 train 56.63% val 58.96% test 59.77% (169s)
+    ep 3 [   0/351] loss 1.034 acc 62.50%
+    ep 3 [ 100/351] loss 1.093 acc 61.18%
+    ep 3 [ 200/351] loss 1.071 acc 61.92%
+    ep 3 [ 300/351] loss 1.050 acc 62.47%
+  epoch 3/15 train 62.79% val 62.98% test 62.94% (260s)
+    ep 4 [   0/351] loss 1.030 acc 66.41%
+    ep 4 [ 100/351] loss 0.971 acc 65.62%
+    ep 4 [ 200/351] loss 0.956 acc 65.93%
+    ep 4 [ 300/351] loss 0.941 acc 66.59%
+  epoch 4/15 train 66.83% val 68.46% test 69.03% (375s)
+    ep 5 [   0/351] loss 0.823 acc 67.97%
+    ep 5 [ 100/351] loss 0.890 acc 68.97%
+    ep 5 [ 200/351] loss 0.882 acc 69.16%
+    ep 5 [ 300/351] loss 0.871 acc 69.40%
+  epoch 5/15 train 69.52% val 67.76% test 68.10% (485s)
+    ep 6 [   0/351] loss 0.728 acc 72.66%
+    ep 6 [ 100/351] loss 0.828 acc 70.97%
+    ep 6 [ 200/351] loss 0.826 acc 70.89%
+    ep 6 [ 300/351] loss 0.819 acc 71.13%
+  epoch 6/15 train 71.37% val 68.34% test 68.34% (585s)
+    ep 7 [   0/351] loss 0.946 acc 69.53%
+    ep 7 [ 100/351] loss 0.778 acc 72.84%
+    ep 7 [ 200/351] loss 0.780 acc 72.55%
+    ep 7 [ 300/351] loss 0.777 acc 72.67%
+  epoch 7/15 train 72.81% val 73.96% test 73.40% (682s)
+    ep 8 [   0/351] loss 0.782 acc 74.22%
+    ep 8 [ 100/351] loss 0.741 acc 74.10%
+    ep 8 [ 200/351] loss 0.748 acc 73.84%
+    ep 8 [ 300/351] loss 0.746 acc 74.02%
+  epoch 8/15 train 74.02% val 72.90% test 73.01% (784s)
+    ep 9 [   0/351] loss 0.730 acc 76.56%
+    ep 9 [ 100/351] loss 0.716 acc 74.97%
+    ep 9 [ 200/351] loss 0.724 acc 74.62%
+    ep 9 [ 300/351] loss 0.716 acc 75.05%
+  epoch 9/15 train 74.93% val 74.32% test 74.59% (915s)
+    ep 10 [   0/351] loss 0.670 acc 76.56%
+    ep 10 [ 100/351] loss 0.677 acc 76.98%
+    ep 10 [ 200/351] loss 0.689 acc 76.26%
+    ep 10 [ 300/351] loss 0.685 acc 76.34%
+  epoch 10/15 train 76.34% val 74.42% test 74.92% (1048s)
+    ep 11 [   0/351] loss 0.699 acc 75.00%
+    ep 11 [ 100/351] loss 0.659 acc 77.04%
+    ep 11 [ 200/351] loss 0.658 acc 77.10%
+    ep 11 [ 300/351] loss 0.656 acc 77.16%
+  epoch 11/15 train 77.07% val 76.22% test 76.33% (1155s)
+    ep 12 [   0/351] loss 0.708 acc 75.00%
+    ep 12 [ 100/351] loss 0.627 acc 78.23%
+    ep 12 [ 200/351] loss 0.625 acc 78.28%
+    ep 12 [ 300/351] loss 0.623 acc 78.29%
+  epoch 12/15 train 78.21% val 79.28% test 79.19% (1256s)
+    ep 13 [   0/351] loss 0.700 acc 77.34%
+    ep 13 [ 100/351] loss 0.598 acc 79.50%
+    ep 13 [ 200/351] loss 0.592 acc 79.53%
+    ep 13 [ 300/351] loss 0.590 acc 79.54%
+  epoch 13/15 train 79.60% val 80.74% test 81.05% (1385s)
+    ep 14 [   0/351] loss 0.516 acc 83.59%
+    ep 14 [ 100/351] loss 0.553 acc 81.17%
+    ep 14 [ 200/351] loss 0.554 acc 81.25%
+    ep 14 [ 300/351] loss 0.551 acc 81.27%
+  epoch 14/15 train 81.30% val 81.92% test 81.86% (1565s)
+    ep 15 [   0/351] loss 0.525 acc 81.25%
+    ep 15 [ 100/351] loss 0.528 acc 81.60%
+    ep 15 [ 200/351] loss 0.521 acc 81.98%
+    ep 15 [ 300/351] loss 0.523 acc 81.95%
+  epoch 15/15 train 81.90% val 82.28% test 82.07% (1664s)
+[nas-best] test top1 82.07% (epoch 15) -> checkpoints/nas_best.pt
